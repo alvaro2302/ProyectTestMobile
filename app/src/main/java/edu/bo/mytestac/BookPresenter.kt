@@ -25,7 +25,6 @@ class BookPresenter(val view:IBookList.View, val context:Context):IBookList.Pres
         lista = runBlocking(Dispatchers.IO){
             val bookDao = DatabaseBook.getDatabase(context).bookDato()
             val repository = BookRepository(bookDao)
-            repository.insert(Book("title","cambioPagina","jeje","sthephen king","hola","https"))
             repository.getListBooks()
         }
 
