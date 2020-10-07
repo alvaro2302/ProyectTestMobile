@@ -4,11 +4,12 @@ import androidx.recyclerview.widget.RecyclerView
 
 interface IBookList {
     interface View {
-
+        fun GotoAddBook()
     }
 
     interface Presenter {
-        fun GotoBook(id: Long)
+        fun GotoBook()
         fun showBooks(reciclerView: RecyclerView)
+
     }
 }

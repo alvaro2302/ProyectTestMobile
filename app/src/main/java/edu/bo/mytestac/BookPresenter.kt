@@ -12,8 +12,8 @@ import kotlinx.coroutines.*
 class BookPresenter(val view:IBookList.View, val context:Context):IBookList.Presenter {
 
 
-    override fun GotoBook(id: Long) {
-        TODO("Not yet implemented")
+    override fun GotoBook() {
+        view.GotoAddBook()
     }
 
     override fun showBooks(reciclerView: RecyclerView) {
