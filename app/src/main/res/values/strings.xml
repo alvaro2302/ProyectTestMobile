@@ -1,3 +1,4 @@
 <resources>
     <string name="app_name">MyTestAC</string>
+    <string name="buttonList">mostrar lista de libros</string>
 </resources>
