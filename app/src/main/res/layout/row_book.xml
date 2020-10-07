@@ -8,6 +8,7 @@
     android:orientation="vertical">
 
     <androidx.cardview.widget.CardView
+        android:id="@+id/cardBook"
         android:layout_width="243dp"
         android:layout_height="289dp"
         android:visibility="visible"

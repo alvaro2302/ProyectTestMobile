@@ -32,6 +32,7 @@ class BookListAdapter(val books:ArrayList<Book>, val context: Context):RecyclerV
 
 
     }
+
     class UserListViewHolder(itemView: View): RecyclerView.ViewHolder(itemView)
 
 }

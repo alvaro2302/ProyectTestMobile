@@ -7,4 +7,7 @@ class BookRepository(private val bookDao:IBookDao) {
     fun getListBooks():List<Book>{
         return bookDao.getList()
     }
+    suspend fun update(book:Book){
+        bookDao.update(book)
+    }
 }

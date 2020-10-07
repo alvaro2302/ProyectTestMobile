@@ -38,6 +38,9 @@ class BookPresenter(val view:IBookList.View, val context:Context):IBookList.Pres
 
     }
 
+    override fun EditBook(book: Book) {
+
+    }
 
 
 }
