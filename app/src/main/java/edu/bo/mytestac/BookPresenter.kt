@@ -12,8 +12,8 @@ import kotlinx.coroutines.*
 class BookPresenter(val view:IBookList.View, val context:Context):IBookList.Presenter {
 
 
-    override fun GotoBook(id: Long) {
-        TODO("Not yet implemented")
+    override fun GotoBook() {
+        view.GotoAddBook()
     }
 
     override fun showBooks(reciclerView: RecyclerView) {
@@ -25,7 +25,6 @@ class BookPresenter(val view:IBookList.View, val context:Context):IBookList.Pres
         lista = runBlocking(Dispatchers.IO){
             val bookDao = DatabaseBook.getDatabase(context).bookDato()
             val repository = BookRepository(bookDao)
-            repository.insert(Book("title","cambioPagina","jeje","sthephen king","hola","https"))
             repository.getListBooks()
         }
 
@@ -39,6 +38,9 @@ class BookPresenter(val view:IBookList.View, val context:Context):IBookList.Pres
 
     }
 
+    override fun EditBook(book: Book) {
+
+    }
 
 
 }

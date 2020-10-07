@@ -1,9 +1,6 @@
 package edu.bo.mytestac.database
 
-import androidx.room.Dao
-import androidx.room.Insert
-import androidx.room.OnConflictStrategy
-import androidx.room.Query
+import androidx.room.*
 
 @Dao
 interface IBookDao {
@@ -12,6 +9,10 @@ interface IBookDao {
 
     @Insert(onConflict = OnConflictStrategy.IGNORE)
     suspend fun insert(book:Book)
+
+    @Update(onConflict = OnConflictStrategy.IGNORE)
+    suspend fun update(book: Book)
+
 
 
 }
